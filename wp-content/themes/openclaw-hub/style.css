@@ -4,7 +4,7 @@ Theme URI: https://github.com/carterman82/openclaw-hub
 Author: openclaw
 Author URI: https://github.com/carterman82
 Description: Network hub for info-verse.org. Aggregation-only home page linking to the five subsite fandoms. Child of openclaw-base with a distinct dark-slate + amber network palette.
-Version: 0.4.0
+Version: 0.5.0
 Template: openclaw-base
 Requires at least: 6.6
 Requires PHP: 8.1
@@ -96,6 +96,14 @@ a { color: inherit; }
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+.openclaw-network-row-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    flex: 1;
+}
+
 .openclaw-network-row-title {
     font-family: var(--wp--preset--font-family--openclaw-display);
     font-size: 32px;
@@ -104,16 +112,6 @@ a { color: inherit; }
     line-height: 1.1;
     margin: 0;
     color: var(--wp--preset--color--openclaw-text);
-    flex-shrink: 0;
-}
-
-.openclaw-network-row-meta {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    max-width: 480px;
-    min-width: 0;
 }
 
 .openclaw-network-row-blurb {
@@ -121,7 +119,7 @@ a { color: inherit; }
     color: var(--wp--preset--color--openclaw-muted);
     font-size: 15px;
     line-height: 1.55;
-    text-align: right;
+    max-width: 640px;
 }
 
 .openclaw-network-row-visit {
@@ -257,9 +255,7 @@ a { color: inherit; }
 
 @media (max-width: 760px) {
     .openclaw-network-row-title { font-size: 26px; }
-    .openclaw-network-row-header { flex-direction: column; align-items: flex-start; gap: 8px; }
-    .openclaw-network-row-meta { align-items: flex-start; max-width: none; }
-    .openclaw-network-row-blurb { text-align: left; }
+    .openclaw-network-row-header { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
 
 @media (max-width: 640px) {
